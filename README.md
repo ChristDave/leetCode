@@ -1,8 +1,8 @@
 # leetCode
 
 #### Here are some leetCode i solved including the language used and the % of the effectiveness 
-* Longest Palindromic Substring <br>
-level: Medium <br>
+* Longest Palindromic Substring <br> <br> 
+level: Medium <br> <br>
 Given a string s, return the longest palindromic substring in s. <br> <br>
 
 Example 1: <br>
