@@ -2,23 +2,23 @@
 
 #### Here are some leetCode i solved including the language used and the % of the effectiveness 
 
-5. Longest Palindromic Substring < /br>
-level: Medium < /br>
-Given a string s, return the longest palindromic substring in s. < /br> < /br>
+5. Longest Palindromic Substring <br>
+level: Medium <br>
+Given a string s, return the longest palindromic substring in s. <br> <br>
 
-Example 1: < br/>
-Input: s = "babad" < br/>
-Output: "bab" < br/>
-Explanation: "aba" is also a valid answer. < br/> < br/>
+Example 1: <br>
+Input: s = "babad" <br>
+Output: "bab" <br>
+Explanation: "aba" is also a valid answer. <br> < br>
 
-Example 2: < br/>
-Input: s = "cbbd" < br/>
-Output: "bb" < br/> < br/>
+Example 2: <br>
+Input: s = "cbbd" <br>
+Output: "bb" <br> <br>
 
 Constraints: < br/> 
 
-1 <= s.length <= 1000 < br/>
-s consist of only digits and English letters. < br/>
+1 <= s.length <= 1000 <br>
+s consist of only digits and English letters. <br>
 ```
 language: python
 %: 63
