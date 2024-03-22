@@ -6,7 +6,6 @@
   
 level: Medium <br> <br>
 
-
 Given a string s, return the longest palindromic substring in s. <br> <br>
 
 Example 1: <br>
@@ -18,7 +17,7 @@ Example 2: <br>
 Input: s = "cbbd" <br>
 Output: "bb" <br> <br>
 
-Constraints: < br/> 
+Constraints: <br> 
 
 1 <= s.length <= 1000 <br>
 s consist of only digits and English letters. <br>
