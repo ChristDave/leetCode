@@ -2,7 +2,6 @@
 
 #### Here are some leetCode i solved including the language used and the % of the effectiveness 
 
-```
 5. Longest Palindromic Substring
 level: Medium
 Given a string s, return the longest palindromic substring in s.
@@ -21,12 +20,11 @@ Constraints:
 1 <= s.length <= 1000
 s consist of only digits and English letters.
 ```
-
-> Solution:
-  language: python
-  class Solution:
-    def longestPalindrome(self, s: str) -> str:
-        if len(s) == 1:
+language: python
+%: 63
+class Solution:
+  def longestPalindrome(self, s: str) -> str:
+      if len(s) == 1:
             return s
 
         l = []
