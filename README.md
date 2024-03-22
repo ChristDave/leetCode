@@ -2,9 +2,9 @@
 
 #### Here are some leetCode i solved including the language used and the % of the effectiveness 
 
-5. Longest Palindromic Substring < br/>
-level: Medium < br/>
-Given a string s, return the longest palindromic substring in s. < br/> < br/>
+5. Longest Palindromic Substring < /br>
+level: Medium < /br>
+Given a string s, return the longest palindromic substring in s. < /br> < /br>
 
 Example 1: < br/>
 Input: s = "babad" < br/>
