@@ -23,9 +23,12 @@ Constraints: <br>
 s consist of only digits and English letters. <br>
 ```
 **Solution :
-language: python `#RRGGBB`
-%: 63
-**
+language: python
+%: 63**
+<p>
+Quack quack
+<text color=red>ERROR</text>
+</p>
 ```
 class Solution:
   def longestPalindrome(self, s: str) -> str:
