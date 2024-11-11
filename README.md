@@ -1,10 +1,10 @@
-# leetCode
+# LeetCode
 
 #### Here are some leetCode i solved including the language used and the % of the effectiveness 
-* Longest Palindromic Substring <br> <br>
+### Longest Palindromic Substring 
 
   
-level: Medium <br> <br>
+**level: Medium** <br> <br>
 
 Given a string s, return the longest palindromic substring in s. <br> <br>
 
@@ -65,7 +65,7 @@ class Solution:
       return s[0]
 ```
 
-* Two Sums
+### Two Sums
    Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. <br>
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice. <br>
