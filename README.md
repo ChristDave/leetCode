@@ -1,11 +1,11 @@
 # LeetCode
 
 #### Here are some leetCode i solved including the language used and the % of the effectiveness 
-### Longest Palindromic Substring 
+### 1 - Longest Palindromic Substring 
 
   
 **level: Medium** <br> <br>
-
+```
 Given a string s, return the longest palindromic substring in s. <br> <br>
 
 Example 1: <br>
@@ -21,6 +21,8 @@ Constraints: <br>
 
 1 <= s.length <= 1000 <br>
 s consist of only digits and English letters. <br>
+```
+**Solution :**
 ```
 language: python
 %: 63
