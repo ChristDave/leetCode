@@ -142,4 +142,12 @@ s consists of English letters (lower-case and upper-case), ',' and '.'.
 **Solution:
 language: python
 %: 63**
-``````
+```
+```
+
+**Learnt:**
+```
+- initialize an empty matrix with x rows and y columns
+matrix = [["" for _ in range(x)] for _ in range(y)]
+```
+
