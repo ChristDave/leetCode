@@ -22,10 +22,11 @@ Constraints: <br>
 1 <= s.length <= 1000 <br>
 s consist of only digits and English letters. <br>
 ```
-**Solution :**
-```
-language: python
+**Solution :
+language: python `#RRGGBB`
 %: 63
+**
+```
 class Solution:
   def longestPalindrome(self, s: str) -> str:
       if len(s) == 1:
@@ -67,7 +68,8 @@ class Solution:
       return s[0]
 ```
 
-### Two Sums
+### 2 - Two Sums
+```
    Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. <br>
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice. <br>
@@ -89,3 +91,4 @@ Example 3:
 
 Input: nums = [3,3], target = 6
 Output: [0,1]
+```
