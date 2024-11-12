@@ -196,9 +196,33 @@ class Solution:
         return res
 ```
 
-**Learn:**
+**Solution 2: <br> 
+language: python <br>
+```
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if(numRows  < 2):
+            return s
+        arr = ['' for i in range(numRows)]
+        direction = 'down'
+        row = 0
+        for i in s:
+            arr[row] += i
+            if row == numRows-1:
+                direction = 'up'
+            elif row == 0:
+                direction = 'down'
+            if(direction == 'down'):
+                row += 1
+            else:
+                row -= 1
+        return(''.join(arr))
+```
+
+**Note:**
 ```
 - initialize an empty matrix with x rows and y columns
 matrix = [["" for _ in range(y)] for _ in range(x)]
+- join a list with what's inside the quote
+''.join(matrix)
 ```
-
