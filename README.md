@@ -196,8 +196,8 @@ class Solution:
         return res
 ```
 
-**Solution 2: <br> 
-language: python <br>
+**Solution 2:** <br> 
+**language: python** <br>
 ```
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
@@ -223,6 +223,7 @@ class Solution:
 ```
 - initialize an empty matrix with x rows and y columns
 matrix = [["" for _ in range(y)] for _ in range(x)]
+
 - join a list with what's inside the quote
 ''.join(matrix)
 ```
