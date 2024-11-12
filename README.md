@@ -143,9 +143,58 @@ s consists of English letters (lower-case and upper-case), ',' and '.'.
 language: python
 %: 63**
 ```
+        if len(s) <= numRows:
+            return s
+        
+        if numRows == 1:
+            return s
+            
+        # Find the number of columns
+        tail = 1
+        count = 1
+        numCols = 1
+        while count < len(s):  
+            count = count + 1
+            tail = tail + 1
+            if tail == numRows:
+                while tail != 1 and count < len(s):
+                    count = count + 1
+                    tail = tail - 1
+                    numCols = numCols + 1
+                                  
+        return s
+        # populate the matrix
+        tail = 0
+        count = 0
+        i = 0
+        l = [["" for _ in range(numCols)] for _ in range(numRows)]
+        while i < numCols:
+            j = 0
+            while j < numRows and count < len(s):    
+                if tail == j:   #tail is like a pointer to the back 
+                    l[j][i] = s[count]        
+                    count = count + 1
+                    tail = tail + 1
+                    j = j + 1
+                    if tail == numRows:
+                        tail = tail - 2
+                        while tail != 0 and count < len(s): # handle the diagonal
+                            i = i + 1
+                            l[tail][i] = s[count]
+                            tail = tail - 1
+                            count = count + 1
+                            
+            i = i + 1
+                        
+        res = ""
+        for i in range(numRows):
+            for j in range(numCols):
+                res = res + l[i][j]
+
+        return res
 ```
 
-**Learnt:**
+**Learn:**
 ```
 - initialize an empty matrix with x rows and y columns
 matrix = [["" for _ in range(y)] for _ in range(x)]
