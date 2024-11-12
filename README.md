@@ -148,6 +148,6 @@ language: python
 **Learnt:**
 ```
 - initialize an empty matrix with x rows and y columns
-matrix = [["" for _ in range(x)] for _ in range(y)]
+matrix = [["" for _ in range(y)] for _ in range(x)]
 ```
 
