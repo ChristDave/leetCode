@@ -139,10 +139,12 @@ s consists of English letters (lower-case and upper-case), ',' and '.'.
 1 <= numRows <= 1000
  
 ```
-**Solution:
-language: python
+**Solution: <br> 
+language: python <br>
 %: 63**
 ```
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
         if len(s) <= numRows:
             return s
         
