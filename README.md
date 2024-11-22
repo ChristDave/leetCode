@@ -282,7 +282,28 @@ class Solution:
             res = 0
 
         return res
+```
+**Solution2: 
+language: python**
+
+```
+class Solution:
+    def reverse(self, x: int) -> int:
+
+        rev = abs(x) # get an absolute value
+        rev = str(rev) # turn it into a string
+        rev = rev[::-1] # reverse the number while it's a string
+        rev = int(rev) # turn it into an integer again
+
+        if rev.bit_length() < 32:
+            if x < 0:
+                return -rev
+            else:
+                return rev
+        else:
+            return 0
 ``` 
+
 **Note:**
 ```
 - convert int to string
@@ -290,4 +311,11 @@ x = str(x)
 
 - convert string to int
 x = int(x)
+
+- reverse the number while it's a string
+rev = rev[::-1]
+
+- bit_length() returns the number of bits required to represent the integer
+let x be a int:
+x.bit_length()
 ```
