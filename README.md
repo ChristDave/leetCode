@@ -259,7 +259,7 @@ Constraints:
 ```
 **Solution: <br> 
 language: python <br>
-%: 70.25**
+%: 86.35**
 
 ```
 class Solution:
