@@ -71,7 +71,7 @@ class Solution:
 ### 2 - Two Sums
 **level: Medium** <br> <br>
 ```
-   Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. <br>
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. <br>
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice. <br>
 
@@ -231,7 +231,8 @@ matrix = [["" for _ in range(y)] for _ in range(x)]
   
 **level: Medium** <br> <br>
 ```
-Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+Given a signed 32-bit integer x, return x with its digits reversed.
+If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.
 
 Assume the environment does not allow you to store 64-bit integers (signed or unsigned). 
 
@@ -276,7 +277,7 @@ class Solution:
 
         res = int(res)
 
-        if res > math.pow(2,31) or res < math.pow(-2,31):
+        if res > math.pow(2,31) - 1 or res < math.pow(-2,31):
             res = 0
 
         return res
