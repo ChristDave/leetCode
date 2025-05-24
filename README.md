@@ -67,7 +67,7 @@ class Solution:
           return maxi
       return s[0]
 ```
-
+---
 ### 2 - Two Sums
 **level: Medium** <br> <br>
 ```
@@ -96,8 +96,7 @@ Output: [0,1]
 **Solution:
 language: python
 %: 63**
-```
-```
+---
 
 ### 3 - Zigzag Conversion
 **level: Medium** <br> <br>
@@ -228,6 +227,8 @@ matrix = [["" for _ in range(y)] for _ in range(x)]
 - join a list with what's inside the quote
 ''.join(matrix)
 ```
+---
+
 ### 4 - Reverse Integer
   
 **level: Medium** <br> <br>
@@ -320,6 +321,7 @@ let x be a int:
 x.bit_length()
 ```
 ---
+
 ### 5 - Reformat Date 
 
   
@@ -341,53 +343,65 @@ Example 1:
 
 Input: date = "20th Oct 2052"
 Output: "2052-10-20"
+
 Example 2:
 
 Input: date = "6th Jun 1933"
 Output: "1933-06-06"
+
+Example 3:
+
+Input: date = "26th May 1960"
+Output: "1960-05-26"
 ```
 **Solution :
 language: python
-%: 63**
+%: 85**
 
 ```
 class Solution:
-  def longestPalindrome(self, s: str) -> str:
-      if len(s) == 1:
-            return s
+  def date(s):
+    res = s.split()
+    dd = ""
+    for i in res[0]:
+        if i == 't':
+            break
+        else:
+            dd = dd+i
 
-      l = []
-      for i in range(0,len(s)-1):
-          res = ""
-          for j in range(len(s)-1,i,-1):
-              res = ""
-              count = True
-              if s[i] == s[j]:
-                  res += s[i]
-                  if j == i+1:
-                      res += s[i]
-                      l.append(res)
-                  else:
-                      a = i
-                      b = j
-                      while b >= a+1 and count:
-                          a+=1
-                          b-=1
-                          if s[a] != s[b]:
-                              count = False
-                              res = ""
-                                
-                      if count:
-                          res = ""
-                          for k in range(i,j+1):
-                              res += s[k]
-                          l.append(res)
-          
-      if len(l) != 0:
-          maxi = ""
-          for i in l:
-              if len(i)>len(maxi):
-                  maxi = i
-          return maxi
-      return s[0]
+    if len(dd) == 1:
+        dd = '0'+dd
+    return res[2]+"-"+monthToNum(res[1])+"-"+dd
+def monthToNum(shortMonth):
+    return {
+            'Jan': '01',
+            'Feb': '02',
+            'Mar': '03',
+            'Apr': '04',
+            'May': '05',
+            'Jun': '06',
+            'Jul': '07',
+            'Aug': '08',
+            'Sep': '09', 
+            'Oct': '10',
+            'Nov': '11',
+            'Dec': '12'
+    }[shortMonth]
 ```
+
+**Note:**
+```
+- convert int to string
+x = str(x)
+
+- convert string to int
+x = int(x)
+
+- reverse the number while it's a string
+rev = rev[::-1]
+
+- bit_length() returns the number of bits required to represent the integer
+let x be a int:
+x.bit_length()
+```
+---
