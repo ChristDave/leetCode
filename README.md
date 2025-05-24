@@ -22,8 +22,8 @@ Constraints: <br>
 1 <= s.length <= 1000 <br>
 s consist of only digits and English letters. <br>
 ```
-**Solution :
-language: python
+**Solution: <br> 
+language: python <br>
 %: 63**
 
 ```
@@ -93,8 +93,8 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]
 ```
-**Solution:
-language: python
+**Solution: <br> 
+language: python <br>
 %: 63**
 ---
 
@@ -361,47 +361,32 @@ language: python
 ```
 class Solution:
   def date(s):
-    res = s.split()
-    dd = ""
-    for i in res[0]:
-        if i == 't':
-            break
-        else:
-            dd = dd+i
-
-    if len(dd) == 1:
-        dd = '0'+dd
-    return res[2]+"-"+monthToNum(res[1])+"-"+dd
-def monthToNum(shortMonth):
-    return {
-            'Jan': '01',
-            'Feb': '02',
-            'Mar': '03',
-            'Apr': '04',
-            'May': '05',
-            'Jun': '06',
-            'Jul': '07',
-            'Aug': '08',
-            'Sep': '09', 
-            'Oct': '10',
-            'Nov': '11',
-            'Dec': '12'
-    }[shortMonth]
+    parts = s.split()
+    
+    # Extract day using string methods 
+    day_str = parts[0].rstrip('stndrh')  # Remove common ordinal suffixes
+    day = day_str.zfill(2)  # Zero-pad to 2 digits
+    
+    months = {
+        'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04',
+        'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08',
+        'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'
+    }
+    
+    return f"{parts[2]}-{months[parts[1]]}-{day}"
 ```
 
 **Note:**
 ```
-- convert int to string
-x = str(x)
+- rstrip("xxxx"), Removes characters from the end until it finds a character not in the specified set
+day = "20th"
+day = day.rstrip("th")  ~~ day => 20
 
-- convert string to int
-x = int(x)
+- rstrip(), If no argument given, removes whitespace
+"45 ".rstrip() -> "45"
 
-- reverse the number while it's a string
-rev = rev[::-1]
+- zfill(), Adds '0' characters to the left until the string reaches the specified length
+"5".zfill(2) → "05" (ensures 2-digit format)
 
-- bit_length() returns the number of bits required to represent the integer
-let x be a int:
-x.bit_length()
 ```
 ---
